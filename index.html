@@ -1,0 +1,130 @@
+<!Doctype html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <style>
+            body{
+                font-size: 20px;
+                font-family: font-family: 'Slabo 27px', serif;
+               
+                background: url("https://i0.pickpik.com/photos/831/668/903/winter-night-blue-shade-preview.jpg");
+                background-size: cover;
+                color: white;
+            }
+        .forms{
+            margin-left: 300px;
+            margin-right: 400px;
+
+        }
+            fieldset{
+                padding-left: 50px;
+                border-radius: 10px;
+                background-color: black;
+                opacity: 0.8;
+            }
+            .submit{
+                border-radius: 20px;
+                font-size: 20px;
+                padding: 10px;
+                background-color: red;
+                color: white;
+                margin-left: 200px;
+                border-color: red;
+            }
+            legend{
+                text-align: center;
+                font-family: 'Lobster', cursive;
+                font-size: 50px;
+                color: red;
+                font-weight: bold;
+            }
+            .name{
+                margin-left: 32px;
+            }
+            .dob{
+                margin-left: 40px;
+            }
+            .course{
+                margin-left: 30px;
+            }
+            .section{
+                margin-left: 26px;
+            }
+            .state{
+                margin-left: 44px;
+            }
+            .email{
+                margin-left: 36px;
+            }
+        
+        </style>
+        
+    </head>
+    <body>
+        <form class="forms">
+            <fieldset>
+                <legend>Introduction</legend>
+                <br>
+                Name <input type="text" class="name" required><br><br>
+                DOB <input type="text" class="dob" required><br><br>
+                Gender <br><br>
+                &nbsp; &nbsp; Male <input type="radio" name="gender">
+                Female <input type="radio" name="gender"><br><br>
+                Course <input type="text" placeholder="CSE" class="course" required><br><br>
+                Section <input type="text" placeholder="AcadView 1" class="section" required><br><br>
+                City/Town <input type="text" required><br><br>
+                State
+                <select name="State" class="state" required>
+                    <option value="Andhra Pradesh">Andhra Pradesh </option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh </option>
+                    <option value="Assam">Assam </option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgrh">Chhattisgarh</option> 
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    <option value="Jharkhnd">Jharkhand</option>
+                    <option value="Karnatak">Karnataka </option>
+                    <option value="Kerela">Kerala </option>
+                    <option value="Madhya Pradesh">Madhya Pradesh </option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur </option>
+                    <option value="Meghalaya">Meghalaya </option>
+                    <option value="Mizoram">Mizoram </option>
+                    <option value="Nagaland">Nagaland </option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab" selected>Punjab </option>
+                    <option value="Rajasthan">Rajasthan </option>
+                    <option value="Sikkim">Sikkim </option>
+                    <option value="Tamil Nadu">Tamil Nadu </option>
+                    <option value="Telangana">Telangana </option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh </option>
+                    <option value="Uttrakhand">Uttarakhand </option>
+                    <option value="West Bengal">West Bengal </option>
+                    <option value="Andaman and Nicobar">Andaman and Nicobar</option>
+                    <option value="Chandigarh">Chandigarh </option>
+                    <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                    <option value="Daman and Diu">Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Pondicherry">Pondicherry</option>
+                
+                </select><br><br>
+                Hobbies <br><br> <textarea name="hobbies" rows="6" cols="40">Write down Your hobbies here
+                </textarea><br><br>
+                E-mail <input type="email" class="email" required><br><br><br>
+                <input type="submit" class="submit" onclick="Myfunction()">
+                
+            </fieldset>
+        </form>
+        <script>
+            function Myfunction() {
+                alert("Your form is submitted");
+            }
+        </script>
+    </body>
+</html>
