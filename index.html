@@ -1,0 +1,116 @@
+<!Form Validation Using Javascript>
+
+<!Doctype html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <style>
+            body{
+                font-size: 20px;
+                font-family: font-family: 'Slabo 27px', serif;
+               
+                background: url("https://i0.pickpik.com/photos/831/668/903/winter-night-blue-shade-preview.jpg");
+                background-size: cover;
+                color: white;
+            }
+        form{
+            margin-left: 300px;
+            margin-right: 400px;
+
+        }
+            fieldset{
+                padding-left: 50px;
+                border-radius: 10px;
+                background-color: black;
+                opacity: 0.8;
+            }
+            .submit{
+                border-radius: 20px;
+                font-size: 20px;
+                padding: 10px;
+                background-color: red;
+                color: white;
+                margin-left: 200px;
+                border-color: red;
+            }
+            legend{
+                text-align: center;
+                font-family: 'Lobster', cursive;
+                font-size: 50px;
+                color: red;
+                font-weight: bold;
+            }
+       
+        
+        </style>
+        
+    </head>
+    <body>
+        <form name="myForm" action="#" onsubmit = "return validateForm()" method="post">
+            <fieldset>
+                <legend>Introduction</legend>
+                <br>
+                Name <input type="text" name="fname" class="name"><br><br>
+                Password <input type="password" name="pass" class="pass"><br><br>
+                Phone No <input type="text" name="phone" class="phone" maxlength="10"><br><br>
+                E-mail <input type="email" name="email" class="email" ><br><br><br>
+                <input type="submit" class="submit">
+                
+            </fieldset>
+        </form>
+        <script>
+            function validateForm() {
+                
+                // validating name
+                var n = document.forms["myForm"]["fname"].value;
+            
+                if(n=="") {
+                    alert("name must be filled out");
+                    return false;
+                }
+                
+                // validating password
+                var p = document.forms["myForm"]["pass"].value;
+                if(p==""){
+                    alert("password must be filled out");
+                    return false;
+                }                
+                else if(p.length<8){
+                    alert("password length should be greater than 8 characters");
+                    return false;
+                }
+                
+                // validating phone number
+                var x = document.forms["myForm"]["phone"].value;
+                if(x==""){
+                         alert("phone number must be filled out");
+                    return false;
+                }
+                else if(isNaN(x)) {
+                    alert("phone number contains only digits");
+                    return false;
+                
+                }
+                else if(x.length<10){
+                        alert("phone no contains 10 digits ");
+                        return false;
+                }
+                
+                // validating email
+                var e = document.forms["myForm"]["email"].value;
+                var atpos = e.indexOf("@");
+                var dotpos = e.lastIndexOf(".");
+                if(e==""){
+                    alert("email must be filled out");
+                    return false;
+                }
+                else if(atpos<1 || dotpos < atpos+2 || dotpos+2 >=e.length){
+                    alert("please enter a valid email address");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>
