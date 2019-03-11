@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+}
+
+.logo{
+    padding-left: 30px;
+    font-size: 50px;
+    font-weight: bold;
+}
+.list{
+    padding-right: 30px;
+}
+.even{
+    height: 120px;
+    width: 100px;
+    float:left;
+    padding-bottom: 30px;
+    left: -500px;
+
+}
+.odd{
+    height:120px;
+    width:100px;
+   float: right;
+    right: -450px;
+    padding-bottom: 30px;
+}
+.user{
+    overflow: hidden;
+}
+.dlt{
+    border-radius: 20%;
+    background-color: plum;
+    height: 30px;
+    width: 80px;
+}
+label{
+    font-size: 20px;
+    color: black;
+}
+.heading{
+    color: purple;
+    font-weight: bold;
+}
